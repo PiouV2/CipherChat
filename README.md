@@ -17,6 +17,26 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
+If you want to keep the installation isolated, create a virtual environment and install the requirements from inside it:
+
+### macOS / Linux
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+### Windows
+```bash
+python -m venv .venv
+.venv\\Scripts\\activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+After activation, use `python -m pip` so the packages are installed into the virtual environment.
+
 ---
 
 ## How to Run
