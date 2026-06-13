@@ -13,6 +13,8 @@ from typing import Tuple
 from crypto_utils import derive_keys, encrypt_and_tag, verify_and_decrypt
 # Protocol helpers: packet framing and I/O
 from protocol import send_packet, recv_packet
+# ASCII art splash banner
+from banner import SPLASH
 
 # Default host address used when prompting
 DEFAULT_HOST = "127.0.0.1"
@@ -199,7 +201,10 @@ def main():
         os.system("cls" if os.name == "nt" else "clear")
     except Exception:
         pass
-    
+
+    # Display the splash banner
+    print(SPLASH)
+
     # Prompt user for role, host and port
     mode = prompt_mode()
     host = prompt_default("Host", DEFAULT_HOST)

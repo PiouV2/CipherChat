@@ -1,4 +1,4 @@
-# Secure Chat (SM4 + HMAC)
+# CipherChat (SM4 + HMAC)
 
 A simple two-terminal secure chat prototype using:
 - **SM4 (CBC mode)** for encryption
@@ -10,32 +10,13 @@ A simple two-terminal secure chat prototype using:
 ## Requirements
 
 - Python 3.9+
-- Packages from `requirements.txt`
 
-Install dependencies:
+Install the dependency:
 ```bash
 pip install -r requirements.txt
 ```
 
-If you want to keep the installation isolated, create a virtual environment and install the requirements from inside it:
-
-### macOS / Linux
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
-
-### Windows
-```bash
-python -m venv .venv
-.venv\\Scripts\\activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
-
-After activation, use `python -m pip` so the packages are installed into the virtual environment.
+That's it — only `gmssl` is needed.
 
 ---
 
@@ -83,3 +64,17 @@ to end the session gracefully.
 - The password is turned into keys with PBKDF2.
 
 This is a prototype for learning and not intended for production use.
+
+---
+
+## Documentation Site
+
+A static documentation site is in `web/` — built with Next.js + Tailwind CSS. It covers the protocol, cryptography, usage, and security notes above.
+
+```bash
+cd web
+npm install
+npm run build
+```
+
+The build script copies the output into `docs/` (ready for GitHub Pages).
