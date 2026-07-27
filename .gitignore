@@ -2,3 +2,4 @@
 __pycache__/
 /web/
 .DS_Store
+docs/__next.*.txt
